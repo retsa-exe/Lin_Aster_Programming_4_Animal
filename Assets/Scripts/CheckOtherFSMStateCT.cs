@@ -14,21 +14,15 @@ namespace NodeCanvas.Tasks.Conditions
 
         protected override bool OnCheck()
         {
-            // 1. 检查黑板参数和其中的 GameObject 是否存在
-            if (FSMHolder == null || FSMHolder.value == null)
-            {
-                return false;
-            }
-
-            // 2. 尝试获取 FSMOwner 组件
+            //get the fsm owner component from the game object
             var fsmOwner = FSMHolder.value.GetComponent<FSMOwner>();
 
-            // 3. 确保组件存在且行为已初始化
+            //check if the fsm owner and its behaviour are not null
             if (fsmOwner != null && fsmOwner.behaviour != null)
             {
+                //get the current state of the fsm
                 var currentState = fsmOwner.GetCurrentState();
-
-                // 4. 确保当前有激活的状态，再比对名称
+                //check if the current state is not null and its name matches the specified state name
                 if (currentState != null)
                 {
                     return currentState.name == stateName;

@@ -14,7 +14,8 @@ namespace NodeCanvas.Tasks.Actions {
 		//Use for initialization. This is called only once in the lifetime of the task.
 		//Return null if init was successfull. Return an error string otherwise
 		protected override string OnInit() {
-			time = 0;
+            // Initialize time to 0 at the start of the day cycle
+            time = 0;
             return null;
 		}
 
@@ -27,11 +28,16 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
+			//increase the time
 			time += Time.deltaTime;
+			//print the time
 			Debug.Log("Time: " + time);
+            //check if the time is greater than the day duration
             if (time >= dayDuration)
 			{
-				isDayTime.SetValue(!isDayTime.value);
+                //toggle the day time
+                isDayTime.SetValue(!isDayTime.value);
+				//reset the timer
 				time = 0;
             }
 		}

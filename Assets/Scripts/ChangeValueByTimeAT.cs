@@ -26,7 +26,8 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			value.value += ratio * Time.deltaTime;
+            //change the value by the ratio over time
+            value.value += ratio * Time.deltaTime;
         }
 
 		//Called when the task is disabled.

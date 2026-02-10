@@ -19,6 +19,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+            // Set all animation states to false
             hamsterAnimator.value.SetBool("isWalking", false);
             hamsterAnimator.value.SetBool("isSleeping", false);
             hamsterAnimator.value.SetBool("isEating", false);

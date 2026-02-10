@@ -23,7 +23,8 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			if (elapsedTime >= waitTime) {
+            //wait for the amount of time specified
+            if (elapsedTime >= waitTime) {
 				EndAction(true);
             }
         }

@@ -29,16 +29,20 @@ namespace NodeCanvas.Tasks.Actions {
 		//Called once per frame while the action is active.
 		protected override void OnUpdate()
 		{
-			navMeshAgent.value.SetDestination(targetTransform.value.position);
+            //set the destination of the nev mesh agent to the position of the target transform
+            navMeshAgent.value.SetDestination(targetTransform.value.position);
 
-			if (Vector3.Distance(targetTransform.value.position, navMeshAgent.value.transform.position) < 0.3f)
+            //end action when close enough to the target
+            if (Vector3.Distance(targetTransform.value.position, navMeshAgent.value.transform.position) < 0.3f)
 			{
-				hamsterAnimator.value.SetBool("isWalking", false);
+                //end the walking animation
+                hamsterAnimator.value.SetBool("isWalking", false);
 				EndAction(true);
             }
 			else
 			{
-				hamsterAnimator.value.SetBool("isWalking", true);
+                //else play the walking animation
+                hamsterAnimator.value.SetBool("isWalking", true);
             }
 		}
 

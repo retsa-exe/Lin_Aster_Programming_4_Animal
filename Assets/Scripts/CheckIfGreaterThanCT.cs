@@ -29,7 +29,8 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-			return value.value > compareValue;
+            //return whether the value is greater than the compare value
+            return value.value > compareValue;
 		}
 	}
 }

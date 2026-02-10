@@ -25,7 +25,8 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			float angle = rotationSpeed * Time.deltaTime;
+            //rotate the target around the x-axis at the speed
+            float angle = rotationSpeed * Time.deltaTime;
 			target.transform.Rotate(angle, 0, 0);
         }
 
