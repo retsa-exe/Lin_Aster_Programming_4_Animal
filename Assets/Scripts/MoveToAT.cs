@@ -10,9 +10,9 @@ namespace NodeCanvas.Tasks.Actions {
 
 		public BBParameter<Animator> hamsterAnimator;
 
-		public BBParameter<Transform> targetTransform;
-
 		public BBParameter<NavMeshAgent> navMeshAgent;
+
+        public BBParameter<Transform> targetTransform;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -34,6 +34,7 @@ namespace NodeCanvas.Tasks.Actions {
 			if (Vector3.Distance(targetTransform.value.position, navMeshAgent.value.transform.position) < 0.3f)
 			{
 				hamsterAnimator.value.SetBool("isWalking", false);
+				EndAction(true);
             }
 			else
 			{

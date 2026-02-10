@@ -389,6 +389,7 @@ Transform:
   - {fileID: 220590286}
   - {fileID: 1855617377}
   - {fileID: 1664226152}
+  - {fileID: 1592715440}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &810861191
@@ -464,12 +465,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"HungerValue":{"_value":35.0,"_name":"HungerValue","_id":"7397e4a5-a7d2-4f18-8ed4-e526fd8554c0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"ThirstyValue":{"_name":"ThirstyValue","_id":"53be6629-c2c4-46e6-bd80-4d23971dfaf4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"ThirstyValue":{"_value":50.0,"_name":"ThirstyValue","_id":"53be6629-c2c4-46e6-bd80-4d23971dfaf4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"HamsterAnimator":{"_value":1,"_name":"HamsterAnimator","_id":"7b7ede0a-b6e9-4467-8ae3-76bdc8109dca","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Animator,
     UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"HamsterNavMeshAgent":{"_value":2,"_name":"HamsterNavMeshAgent","_id":"e5b0a15e-4da3-42ce-88e3-aaed3f72ab8b","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AI.NavMeshAgent,
     UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"FoodSpot":{"_value":3,"_name":"FoodSpot","_id":"464c8fe0-da99-452d-8351-ff8720aa06d0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpot":{"_value":4,"_name":"SleepSpot","_id":"659b6e09-750a-4aeb-81fa-704bfa412e65","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"isSleeping":{"_name":"isSleeping","_id":"51164c7c-1397-4a2b-8a8a-485ac11a493a","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"DrinkSpot":{"_value":5,"_name":"DrinkSpot","_id":"4aa2711e-df14-49cc-a3dc-1fd8733d97de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"isDaytime":{"_value":true,"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences:
   - {fileID: 0}
@@ -477,11 +479,12 @@ MonoBehaviour:
   - {fileID: 810861196}
   - {fileID: 1190099013}
   - {fileID: 1664226152}
+  - {fileID: 1592715440}
   _serializedVariables:
   - _json: '{"_value":35.0,"_name":"HungerValue","_id":"7397e4a5-a7d2-4f18-8ed4-e526fd8554c0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_name":"ThirstyValue","_id":"53be6629-c2c4-46e6-bd80-4d23971dfaf4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  - _json: '{"_value":50.0,"_name":"ThirstyValue","_id":"53be6629-c2c4-46e6-bd80-4d23971dfaf4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":1,"_name":"HamsterAnimator","_id":"7b7ede0a-b6e9-4467-8ae3-76bdc8109dca","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Animator,
@@ -504,7 +507,12 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 1664226152}
-  - _json: '{"_name":"isSleeping","_id":"51164c7c-1397-4a2b-8a8a-485ac11a493a","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+  - _json: '{"_value":1,"_name":"DrinkSpot","_id":"4aa2711e-df14-49cc-a3dc-1fd8733d97de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1592715440}
+  - _json: '{"_value":true,"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
 --- !u!114 &810861194
@@ -520,7 +528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":474.6667,"y":291.3333},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_nestedFSM":{"_value":1},"_name":"Daytime","_position":{"x":645.6667,"y":363.6667},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"value":{"_name":"HungerValue","_targetVariableID":"7397e4a5-a7d2-4f18-8ed4-e526fd8554c0"},"ratio":-1.0,"$type":"NodeCanvas.Tasks.Actions.ChangeValueByTimeAT"}]},"_position":{"x":629.6666,"y":132.3333},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":552.6667,"y":320.6666},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_nestedFSM":{"_value":1},"_name":"Daytime","_position":{"x":720.3334,"y":418.3333},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"value":{"_name":"HungerValue","_targetVariableID":"7397e4a5-a7d2-4f18-8ed4-e526fd8554c0"},"ratio":-1.0,"$type":"NodeCanvas.Tasks.Actions.ChangeValueByTimeAT"},{"value":{"_name":"ThirstyValue","_targetVariableID":"53be6629-c2c4-46e6-bd80-4d23971dfaf4"},"ratio":-0.5,"$type":"NodeCanvas.Tasks.Actions.ChangeValueByTimeAT"}]},"_position":{"x":629.6666,"y":132.3333},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"value":{"_name":"isDaytime","_targetVariableID":"67a1040e-edbe-4305-92e6-9296653e0b69"},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: c595a87ab57d3bc4986a06f31f92d35b, type: 2}
@@ -528,7 +536,7 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -127, y: -71}
+    _translation: {x: -284, y: -154}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -688,6 +696,115 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1855617377}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1592715439
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1592715440}
+  - component: {fileID: 1592715443}
+  - component: {fileID: 1592715442}
+  - component: {fileID: 1592715441}
+  m_Layer: 0
+  m_Name: Drink Spot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1592715440
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592715439}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.04, y: 0.04, z: 2.156}
+  m_LocalScale: {x: 0.068924405, y: 1, z: 0.067728005}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 355570414}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &1592715441
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592715439}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1592715442
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592715439}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: acfb673092197b447896aee3b7e7c4a2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1592715443
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592715439}
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1664226151
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,8 +833,8 @@ Transform:
   m_GameObject: {fileID: 1664226151}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0.04, z: -1.9}
-  m_LocalScale: {x: 0.12, y: 1, z: 0.1}
+  m_LocalPosition: {x: 1.126, y: 0.04, z: -2.09}
+  m_LocalScale: {x: 0.068924405, y: 1, z: 0.067728005}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 355570414}
