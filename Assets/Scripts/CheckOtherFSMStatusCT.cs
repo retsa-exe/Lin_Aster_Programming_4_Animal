@@ -10,7 +10,7 @@ namespace NodeCanvas.Tasks.Conditions
     {
 
         public BBParameter<GameObject> FSMHolder;
-        public string stateName;
+        public string statueName;
 
         protected override bool OnCheck()
         {
@@ -25,7 +25,7 @@ namespace NodeCanvas.Tasks.Conditions
                 //check if the current state is not null and its name matches the specified state name
                 if (currentState != null)
                 {
-                    return currentState.name == stateName;
+                    return currentState.name == statueName;
                 }
             }
 

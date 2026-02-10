@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":522.0,"y":208.6667},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"actions":[{"waitTime":1.0,"$type":"NodeCanvas.Tasks.Actions.WaitAT"},{"target":1,"rotationSpeed":30.0,"$type":"NodeCanvas.Tasks.Actions.RotateAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Spin","_position":{"x":713.6667,"y":323.0},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"FSMHolder":{"_name":"Hamster","_targetVariableID":"4ff8a2be-3791-4b6d-8458-147a0a3d6d75"},"stateName":"Run","$type":"NodeCanvas.Tasks.Conditions.CheckOtherFSMStatusCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"FSMHolder":{"_name":"Hamster","_targetVariableID":"4ff8a2be-3791-4b6d-8458-147a0a3d6d75"},"stateName":"Run","_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckOtherFSMStatusCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":522.0,"y":208.6667},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"actions":[{"waitTime":1.0,"$type":"NodeCanvas.Tasks.Actions.WaitAT"},{"target":1,"rotationSpeed":30.0,"$type":"NodeCanvas.Tasks.Actions.RotateAT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Spin","_position":{"x":715.0,"y":321.6667},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"FSMHolder":{"_name":"Hamster","_targetVariableID":"4ff8a2be-3791-4b6d-8458-147a0a3d6d75"},"statueName":"Run","$type":"NodeCanvas.Tasks.Conditions.CheckOtherFSMStatusCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"FSMHolder":{"_name":"Hamster","_targetVariableID":"4ff8a2be-3791-4b6d-8458-147a0a3d6d75"},"statueName":"Run","_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckOtherFSMStatusCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 23079670}
@@ -274,7 +274,7 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -60, y: -109}
+    _translation: {x: -158, y: -110}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
