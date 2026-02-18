@@ -152,7 +152,11 @@ Transform:
   m_LocalPosition: {x: -1.42, y: 0.721, z: -1.76}
   m_LocalScale: {x: 0.16, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1538270484}
+  - {fileID: 929736206}
+  - {fileID: 340665288}
+  - {fileID: 1834223582}
   m_Father: {fileID: 355570414}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &23079672
@@ -274,7 +278,7 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -158, y: -110}
+    _translation: {x: -143, y: -56}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -522,6 +526,92 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 2036d83e13facfc4ebf723c7cb8bfe6b, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &340665287
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 340665288}
+  - component: {fileID: 340665290}
+  - component: {fileID: 340665289}
+  m_Layer: 0
+  m_Name: Cube (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &340665288
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340665287}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.8742, y: 0.000000059604645, z: 0.4628498}
+  m_LocalScale: {x: 2.7484, y: 0.07430036, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23079671}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!23 &340665289
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340665287}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &340665290
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340665287}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &355570413
 GameObject:
   m_ObjectHideFlags: 0
@@ -631,19 +721,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
   _serializedBlackboard: '{"_variables":{"HungerValue":{"_value":80.0,"_name":"HungerValue","_id":"7397e4a5-a7d2-4f18-8ed4-e526fd8554c0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
-    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"ThirstyValue":{"_value":22.0,"_name":"ThirstyValue","_id":"53be6629-c2c4-46e6-bd80-4d23971dfaf4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"ThirstyValue":{"_value":80.0,"_name":"ThirstyValue","_id":"53be6629-c2c4-46e6-bd80-4d23971dfaf4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"HamsterAnimator":{"_value":1,"_name":"HamsterAnimator","_id":"7b7ede0a-b6e9-4467-8ae3-76bdc8109dca","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Animator,
     UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"HamsterNavMeshAgent":{"_value":2,"_name":"HamsterNavMeshAgent","_id":"e5b0a15e-4da3-42ce-88e3-aaed3f72ab8b","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AI.NavMeshAgent,
     UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"FoodSpot":{"_value":3,"_name":"FoodSpot","_id":"464c8fe0-da99-452d-8351-ff8720aa06d0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpot":{"_value":4,"_name":"SleepSpot","_id":"659b6e09-750a-4aeb-81fa-704bfa412e65","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"DrinkSpot":{"_value":5,"_name":"DrinkSpot","_id":"4aa2711e-df14-49cc-a3dc-1fd8733d97de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"isDaytime":{"_value":true,"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"isDaytime":{"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"WheelTransform":{"_value":6,"_name":"WheelTransform","_id":"6ade20d3-d807-49d4-996e-c278a612e90d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Wheel":{"_value":7,"_name":"Wheel","_id":"1b7c8ecd-586a-4dca-9878-69b70ddc376c","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"EnergyValue":{"_value":100.0,"_name":"EnergyValue","_id":"bdf4c3f8-0846-43cd-b78b-7b71f4a333f0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"FoodSpotFSM":{"_value":8,"_name":"FoodSpotFSM","_id":"c9e1da91-a7ae-4537-b143-dd782c80feee","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpotFSM":{"_value":9,"_name":"SleepSpotFSM","_id":"acb3b4ff-272a-4730-b8f0-21822c229046","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Poop":{"_value":10,"_name":"Poop","_id":"4c3a4dea-99b2-4bb2-9585-df9b57e5291c","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"DrinkSpotFSM":{"_value":11,"_name":"DrinkSpotFSM","_id":"3bb41470-d223-4d75-a0b5-335068a1f98a","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
@@ -657,11 +748,12 @@ MonoBehaviour:
   - {fileID: 1855617376}
   - {fileID: 1664226151}
   - {fileID: 5726831315443461479, guid: 557cc3cf741126544ab629fbff5665e1, type: 3}
+  - {fileID: 1592715439}
   _serializedVariables:
   - _json: '{"_value":80.0,"_name":"HungerValue","_id":"7397e4a5-a7d2-4f18-8ed4-e526fd8554c0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
-  - _json: '{"_value":22.0,"_name":"ThirstyValue","_id":"53be6629-c2c4-46e6-bd80-4d23971dfaf4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  - _json: '{"_value":80.0,"_name":"ThirstyValue","_id":"53be6629-c2c4-46e6-bd80-4d23971dfaf4","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":1,"_name":"HamsterAnimator","_id":"7b7ede0a-b6e9-4467-8ae3-76bdc8109dca","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Animator,
@@ -689,7 +781,7 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 1592715440}
-  - _json: '{"_value":true,"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+  - _json: '{"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":1,"_name":"WheelTransform","_id":"6ade20d3-d807-49d4-996e-c278a612e90d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
@@ -720,6 +812,11 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 5726831315443461479, guid: 557cc3cf741126544ab629fbff5665e1, type: 3}
+  - _json: '{"_value":1,"_name":"DrinkSpotFSM","_id":"3bb41470-d223-4d75-a0b5-335068a1f98a","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
+      UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
+    _references:
+    - {fileID: 0}
+    - {fileID: 1592715439}
 --- !u!114 &810861194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -733,7 +830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_name":"Nighttime","_position":{"x":537.0,"y":325.0},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_nestedFSM":{"_value":2},"_name":"Daytime","_position":{"x":694.3333,"y":443.6666},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"value":{"_name":"HungerValue","_targetVariableID":"7397e4a5-a7d2-4f18-8ed4-e526fd8554c0"},"ratio":-1.0,"$type":"NodeCanvas.Tasks.Actions.ChangeValueByTimeAT"},{"value":{"_name":"ThirstyValue","_targetVariableID":"53be6629-c2c4-46e6-bd80-4d23971dfaf4"},"ratio":-0.5,"$type":"NodeCanvas.Tasks.Actions.ChangeValueByTimeAT"},{"isDayTime":{"_name":"isDaytime","_targetVariableID":"67a1040e-edbe-4305-92e6-9296653e0b69"},"dayDuration":60.0,"daySkybox":3,"nightSkybox":4,"$type":"NodeCanvas.Tasks.Actions.DayCycleAT"}]},"_position":{"x":682.3333,"y":108.3333},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"value":{"_name":"isDaytime","_targetVariableID":"67a1040e-edbe-4305-92e6-9296653e0b69"},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"value":{"_name":"isDaytime","_targetVariableID":"67a1040e-edbe-4305-92e6-9296653e0b69"},"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckBoolCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_nestedFSM":{"_value":1},"_name":"Nighttime","_position":{"x":536.3334,"y":324.3333},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"0"},{"_nestedFSM":{"_value":2},"_name":"Daytime","_position":{"x":694.3333,"y":443.6666},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"1"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"value":{"_name":"HungerValue","_targetVariableID":"7397e4a5-a7d2-4f18-8ed4-e526fd8554c0"},"ratio":-1.0,"$type":"NodeCanvas.Tasks.Actions.ChangeValueByTimeAT"},{"value":{"_name":"ThirstyValue","_targetVariableID":"53be6629-c2c4-46e6-bd80-4d23971dfaf4"},"ratio":-0.5,"$type":"NodeCanvas.Tasks.Actions.ChangeValueByTimeAT"},{"isDayTime":{"_name":"isDaytime","_targetVariableID":"67a1040e-edbe-4305-92e6-9296653e0b69"},"dayDuration":60.0,"daySkybox":3,"nightSkybox":4,"$type":"NodeCanvas.Tasks.Actions.DayCycleAT"}]},"_position":{"x":682.3333,"y":108.3333},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"value":{"_name":"isDaytime","_targetVariableID":"67a1040e-edbe-4305-92e6-9296653e0b69"},"$type":"NodeCanvas.Tasks.Conditions.CheckBoolCT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"value":{"_name":"isDaytime","_targetVariableID":"67a1040e-edbe-4305-92e6-9296653e0b69"},"_invert":true,"$type":"NodeCanvas.Tasks.Conditions.CheckBoolCT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 11400000, guid: 56c834a27b6b7e940970989b0859f9f8, type: 2}
@@ -744,7 +841,7 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -335, y: -72}
+    _translation: {x: -269, y: -258}
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
@@ -781,6 +878,92 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &929736205
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 929736206}
+  - component: {fileID: 929736208}
+  - component: {fileID: 929736207}
+  m_Layer: 0
+  m_Name: Cube (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &929736206
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929736205}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8742, y: -0.48027506, z: 0}
+  m_LocalScale: {x: 2.7484, y: 0.03944987, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23079671}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &929736207
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929736205}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &929736208
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 929736205}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1148695784
 GameObject:
   m_ObjectHideFlags: 0
@@ -882,7 +1065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1190099013}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Food Spot Loaction
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -904,6 +1087,92 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1855617377}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1538270483
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1538270484}
+  - component: {fileID: 1538270486}
+  - component: {fileID: 1538270485}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538270484
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538270483}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.8742, y: 0.4690051, z: 0}
+  m_LocalScale: {x: 2.7484, y: 0.061989747, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23079671}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1538270485
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538270483}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1538270486
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1538270483}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1592715439
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,7 +1185,9 @@ GameObject:
   - component: {fileID: 1592715443}
   - component: {fileID: 1592715442}
   - component: {fileID: 1592715441}
-  m_Layer: 0
+  - component: {fileID: 1592715445}
+  - component: {fileID: 1592715444}
+  m_Layer: 7
   m_Name: Drink Spot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1013,6 +1284,55 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592715439}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1592715444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592715439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b98a6db0b653f764eac834f85857a9dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _parentBlackboard: {fileID: 0}
+  _serializedBlackboard: '{"_variables":{"WaterRemain":{"_value":100.0,"_name":"WaterRemain","_id":"833d5a43-8e18-48b4-a1c5-c0ebbaa23b91","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+    mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
+  _objectReferences: []
+  _serializedVariables:
+  - _json: '{"_value":100.0,"_name":"WaterRemain","_id":"833d5a43-8e18-48b4-a1c5-c0ebbaa23b91","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+      mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
+    _references: []
+--- !u!114 &1592715445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592715439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a7dbb6bbdf4ffb46ab7dd87ba8191e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _serializedExposedParameters: []
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"variable":{"_name":"WaterRemain","_targetVariableID":"833d5a43-8e18-48b4-a1c5-c0ebbaa23b91"},"addValue":100.0,"targetLayers":{"value":128},"$type":"NodeCanvas.Tasks.Actions.AddValueOnClickAT"}]},"_repeatStateActions":true,"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Add","_position":{"x":442.6667,"y":290.6667},"$type":"NodeCanvas.StateMachines.ActionState"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphObjectReferences: []
+  _boundGraphSource:
+    _version: 3.33
+    _category: 
+    _comments: 
+    _translation: {x: 0, y: 0}
+    _zoomFactor: 1
+  _firstActivation: 0
+  _enableAction: 0
+  _disableAction: 0
+  _lockBoundGraphPrefabOverrides: 1
+  _preInitializeSubGraphs: 0
+  _updateMode: 0
+  _graph: {fileID: 0}
+  _blackboard: {fileID: 1592715444}
 --- !u!1 &1664226151
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1477,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":400.0,"y":291.3333},"$type":"NodeCanvas.StateMachines.ActionState"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences: []
   _boundGraphSource:
     _version: 3.33
@@ -1173,6 +1493,92 @@ MonoBehaviour:
   _updateMode: 0
   _graph: {fileID: 0}
   _blackboard: {fileID: 1664226156}
+--- !u!1 &1834223581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834223582}
+  - component: {fileID: 1834223584}
+  - component: {fileID: 1834223583}
+  m_Layer: 0
+  m_Name: Cube (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834223582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834223581}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.8742, y: 0.000000059604645, z: -0.4593398}
+  m_LocalScale: {x: 2.7484, y: 0.08132023, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23079671}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!23 &1834223583
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834223581}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1834223584
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834223581}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1855617376
 GameObject:
   m_ObjectHideFlags: 0
@@ -1188,7 +1594,7 @@ GameObject:
   - component: {fileID: 1855617381}
   - component: {fileID: 1855617383}
   - component: {fileID: 1855617382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Food Spot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1340,7 +1746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Add","_position":{"x":479.3333,"y":272.6667},"$type":"NodeCanvas.StateMachines.ActionState"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"variable":{"_name":"FoodRemain","_targetVariableID":"84727988-a895-49ae-8b3a-3217fe7538c3"},"addValue":100.0,"targetLayers":{"value":64},"$type":"NodeCanvas.Tasks.Actions.AddValueOnClickAT"}]},"_repeatStateActions":true,"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Add","_position":{"x":478.6666,"y":272.0},"$type":"NodeCanvas.StateMachines.ActionState"}],"connections":[],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences: []
   _boundGraphSource:
     _version: 3.33
