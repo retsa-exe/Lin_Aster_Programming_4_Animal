@@ -7,12 +7,14 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class ClearAnimationAT : ActionTask {
 
-		public BBParameter<Animator> hamsterAnimator;
+		Animator hamsterAnimator;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
-			return null;
+			//get the hamster animator from the blackboard
+			hamsterAnimator = agent.GetComponent<Animator>();
+            return null;
 		}
 
 		//This is called once each time the task is enabled.
@@ -20,9 +22,9 @@ namespace NodeCanvas.Tasks.Actions {
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
             // Set all animation states to false
-            hamsterAnimator.value.SetBool("isWalking", false);
-            hamsterAnimator.value.SetBool("isSleeping", false);
-            hamsterAnimator.value.SetBool("isEating", false);
+            hamsterAnimator.SetBool("isWalking", false);
+            hamsterAnimator.SetBool("isSleeping", false);
+            hamsterAnimator.SetBool("isEating", false);
             EndAction(true);
 		}
 

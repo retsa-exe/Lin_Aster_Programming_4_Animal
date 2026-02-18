@@ -10,24 +10,38 @@ namespace NodeCanvas.Tasks.Actions {
 		public BBParameter<bool> isDayTime;
 		public float dayDuration;
         float time;
+		public Material daySkybox;
+		public Material nightSkybox;
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
-		protected override string OnInit() {
+        //Use for initialization. This is called only once in the lifetime of the task.
+        //Return null if init was successfull. Return an error string otherwise
+        protected override string OnInit() {
             // Initialize time to 0 at the start of the day cycle
             time = 0;
             return null;
-		}
+        }
 
-		//This is called once each time the task is enabled.
-		//Call EndAction() to mark the action as finished, either in success or failure.
-		//EndAction can be called from anywhere.
-		protected override void OnExecute() {
+        //This is called once each time the task is enabled.
+        //Call EndAction() to mark the action as finished, either in success or failure.
+        //EndAction can be called from anywhere.
+        protected override void OnExecute() {
+            //initialize the skybox based on the current day time
+            if (isDayTime.value)
+            {
+                RenderSettings.skybox = daySkybox;
+                //update the environment lighting
+                DynamicGI.UpdateEnvironment();
+            }
+            else
+            {
+                RenderSettings.skybox = nightSkybox;
+                //update the environment lighting
+                DynamicGI.UpdateEnvironment();
+            }
+        }
 
-		}
-
-		//Called once per frame while the action is active.
-		protected override void OnUpdate() {
+        //Called once per frame while the action is active.
+        protected override void OnUpdate() {
 			//increase the time
 			time += Time.deltaTime;
 			//print the time
@@ -39,8 +53,22 @@ namespace NodeCanvas.Tasks.Actions {
                 isDayTime.SetValue(!isDayTime.value);
 				//reset the timer
 				time = 0;
+
+                //change the skybox
+				if (isDayTime.value)
+				{
+					RenderSettings.skybox = daySkybox;
+                    //update the environment lighting
+                    DynamicGI.UpdateEnvironment();
+                }
+				else
+				{
+					RenderSettings.skybox = nightSkybox;
+                    //update the environment lighting
+                    DynamicGI.UpdateEnvironment();
+                }
             }
-		}
+        }
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
