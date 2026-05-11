@@ -1802,7 +1802,7 @@ MonoBehaviour:
     UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"FoodSpot":{"_value":3,"_name":"FoodSpot","_id":"464c8fe0-da99-452d-8351-ff8720aa06d0","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"SleepSpot":{"_value":4,"_name":"SleepSpot","_id":"659b6e09-750a-4aeb-81fa-704bfa412e65","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"DrinkSpot":{"_value":5,"_name":"DrinkSpot","_id":"4aa2711e-df14-49cc-a3dc-1fd8733d97de","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
-    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"isDaytime":{"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+    UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"isDaytime":{"_value":true,"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"WheelTransform":{"_value":6,"_name":"WheelTransform","_id":"6ade20d3-d807-49d4-996e-c278a612e90d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"Wheel":{"_value":7,"_name":"Wheel","_id":"1b7c8ecd-586a-4dca-9878-69b70ddc376c","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.GameObject,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"EnergyValue":{"_value":100.0,"_name":"EnergyValue","_id":"bdf4c3f8-0846-43cd-b78b-7b71f4a333f0","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
@@ -1856,7 +1856,7 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 1592715440}
-  - _json: '{"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
+  - _json: '{"_value":true,"_name":"isDaytime","_id":"67a1040e-edbe-4305-92e6-9296653e0b69","$type":"NodeCanvas.Framework.Variable`1[[System.Boolean,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":1,"_name":"WheelTransform","_id":"6ade20d3-d807-49d4-996e-c278a612e90d","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
@@ -4055,7 +4055,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   foodSpotBlackboard: {fileID: 1855617382}
   drinkSpotBlackboard: {fileID: 1592715444}
-  hamsterBlackboard: {fileID: 0}
+  hamsterBlackboard: {fileID: 810861193}
   foodSpotSlider: {fileID: 793966816}
   drinkSpotSlider: {fileID: 637476315}
   hungerSlider: {fileID: 640591461}
